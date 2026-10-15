@@ -400,18 +400,19 @@ All commands run deterministically in a clean environment without requiring a ru
 ```bash
 # 1. Install package in editable mode (via uv or pip)
 pip install -e .
+uv sync
 
 # 2. Run F1 Historical Dataset Audit & IQR Outlier Profiler (US-11 / US-5)
-PYTHONPATH=src python3 -m buenavista_csv.f1_audit   --csv-path data/f1_historical/hotel_bookings.csv   --output-dir output/f1_audit
+PYTHONPATH=src uv run -m buenavista_csv.f1_audit   --csv-path data/f1_historical/hotel_bookings.csv   --output-dir output/f1_audit
 
 # 3. Generate F4 Weekly Traditional Agency CSVs with Configurable Defects (US-25 / US-26)
-PYTHONPATH=src python3 -m buenavista_csv.f4_generator   --f2-events data/f2_reference/events.jsonl   --output-dir output/f4_agency_files   --seed 7   --bookings-per-agency 12   --duplicate-count 3   --missing-currency-rate 0.10
+PYTHONPATH=src uv run -m buenavista_csv.f4_generator   --f2-events data/f2_reference/events.jsonl   --output-dir output/f4_agency_files   --seed 7   --bookings-per-agency 12   --duplicate-count 3   --missing-currency-rate 0.10
 
 # 4. Execute Non-Destructive Batch Quality Controls across F1 and F4 (US-6)
-PYTHONPATH=src python3 -m buenavista_csv.validator   --f1-path data/f1_historical/hotel_bookings.csv   --f4-dir output/f4_agency_files   --f2-events data/f2_reference/events.jsonl   --report-dir output/validation_reports
+PYTHONPATH=src uv run -m buenavista_csv.validator   --f1-path data/f1_historical/hotel_bookings.csv   --f4-dir output/f4_agency_files   --f2-events data/f2_reference/events.jsonl   --report-dir output/validation_reports
 
 # 5. Run Automated Verification Suite (US-11, US-25, US-26, US-5, US-6)
-PYTHONPATH=src python3 -m unittest discover -s tests -v
+PYTHONPATH=src uv run -m unittest discover -s tests -v
 ```
 
 ### Non-Destructive Quality Gate Verification (`US-6 AC1 & AC2`)
