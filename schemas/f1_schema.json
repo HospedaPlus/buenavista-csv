@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F1_Hotel_Booking_Demand_Row",
+  "description": "Canonical schema for F1 historical hotel booking demand dataset (Kaggle).",
+  "type": "object",
+  "required_columns": [
+    "hotel",
+    "is_canceled",
+    "lead_time",
+    "arrival_date_year",
+    "arrival_date_month",
+    "arrival_date_week_number",
+    "arrival_date_day_of_month",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "meal",
+    "country",
+    "market_segment",
+    "distribution_channel",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "reserved_room_type",
+    "assigned_room_type",
+    "booking_changes",
+    "deposit_type",
+    "agent",
+    "company",
+    "days_in_waiting_list",
+    "customer_type",
+    "adr",
+    "required_car_parking_spaces",
+    "total_of_special_requests",
+    "reservation_status",
+    "reservation_status_date"
+  ],
+  "nullable_columns": [
+    "children",
+    "country",
+    "agent",
+    "company"
+  ],
+  "null_tokens": [
+    "NULL",
+    "NA",
+    ""
+  ],
+  "business_rules": {
+    "adr_min_valid": 0.0,
+    "adr_iqr_q1": 69.29,
+    "adr_iqr_median": 94.58,
+    "adr_iqr_q3": 126.0,
+    "adr_iqr_value": 56.71,
+    "adr_iqr_lower_bound": -15.77,
+    "adr_iqr_upper_bound": 211.06,
+    "min_total_guests": 1
+  }
+}

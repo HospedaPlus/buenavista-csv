@@ -1,0 +1,498 @@
+{
+  "f1_validation": {
+    "source": "F1",
+    "file": "hotel_bookings.csv",
+    "rows": 119390,
+    "valid_schema": true,
+    "status": "PASSED_WITH_KNOWN_ANOMALIES",
+    "summary_metrics": {
+      "exact_duplicate_rows": 31994,
+      "textual_null_counts": {
+        "company": 112593,
+        "agent": 16340,
+        "country": 488
+      },
+      "textual_na_children": 4,
+      "zero_guest_rows": 180,
+      "negative_adr_rows": 1,
+      "zero_adr_rows": 1959,
+      "iqr_outlier_rows": 3793,
+      "iqr_bounds": {
+        "q1": 69.29,
+        "q3": 126.0,
+        "iqr": 56.71,
+        "lower": -15.77,
+        "upper": 211.06
+      },
+      "invalid_adr_type_rows": 0
+    },
+    "sample_defects": [
+      {
+        "type": "NEGATIVE_ADR",
+        "file": "hotel_bookings.csv",
+        "field": "adr",
+        "record": "row_14971",
+        "detail": "Negative ADR value: -6.38"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_2226",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_2411",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_3183",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_3686",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_3710",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_4129",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_9378",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_31767",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_32031",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      },
+      {
+        "type": "ZERO_GUESTS_ANOMALY",
+        "file": "hotel_bookings.csv",
+        "field": "adults,children,babies",
+        "record": "row_32829",
+        "detail": "Booking has 0 adults, 0 children, and 0 babies (Defect 1)"
+      }
+    ]
+  },
+  "f4_validation": {
+    "source": "F4",
+    "directory": "output\\f4_agency_files",
+    "agency_files_found": 15,
+    "expected_agency_files": 15,
+    "total_rows": 183,
+    "layout_distribution": {
+      "A": 7,
+      "B": 8,
+      "INVALID": 0
+    },
+    "status": "PASSED_WITH_CATALOGUED_DEFECTS",
+    "defect_counts_by_type": {
+      "MISSING_CURRENCY": 14,
+      "CROSS_CHANNEL_DUPLICATE": 3
+    },
+    "defects": [
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "andes_travel_week.csv",
+        "field": "currency",
+        "record": "AG04-00041",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "andes_travel_week.csv",
+        "field": "currency",
+        "record": "AG04-00048",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "bluesky_agency_week.csv",
+        "field": "currency",
+        "record": "AG12-00138",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "bluesky_agency_week.csv",
+        "field": "currency",
+        "record": "AG12-00146",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "caribeviajes_week.csv",
+        "field": "currency",
+        "record": "AG06-00068",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "costabella_travel_week.csv",
+        "field": "currency",
+        "record": "AG08-00088",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "costabella_travel_week.csv",
+        "field": "currency",
+        "record": "AG08-00094",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "costabella_travel_week.csv",
+        "field": "currency",
+        "record": "AG08-00096",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "destino_feliz_week.csv",
+        "field": "currency",
+        "record": "AG13-00148",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "CROSS_CHANNEL_DUPLICATE",
+        "file": "eurotrip_agency_week.csv",
+        "field": "guest_name,hotel_id,check_in",
+        "record": "AG03-00039",
+        "detail": "Cross-channel duplicate of F2 res-10029 (direct_ota): agency guest 'Elena santos' vs F2 guest 'Elena Santos', check_in 2027-01-25 vs 2027-01-26 (RN-08)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "nortesur_agencia_week.csv",
+        "field": "currency",
+        "record": "AG09-00100",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "nortesur_agencia_week.csv",
+        "field": "currency",
+        "record": "AG09-00110",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "rutas_del_sur_week.csv",
+        "field": "currency",
+        "record": "AG11-00128",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "solymar_tours_week.csv",
+        "field": "currency",
+        "record": "AG02-00016",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "CROSS_CHANNEL_DUPLICATE",
+        "file": "solymar_tours_week.csv",
+        "field": "guest_name,hotel_id,check_in",
+        "record": "AG02-00026",
+        "detail": "Cross-channel duplicate of F2 res-10012 (expedia): agency guest 'Patricia Rossi' vs F2 guest 'Patricia Rossi', check_in 2026-11-07 vs 2026-11-08 (RN-08)"
+      },
+      {
+        "type": "MISSING_CURRENCY",
+        "file": "viajafacil_week.csv",
+        "field": "currency",
+        "record": "AG01-00007",
+        "detail": "Currency code is empty (Section 5.3 Defect 3)"
+      },
+      {
+        "type": "CROSS_CHANNEL_DUPLICATE",
+        "file": "viajafacil_week.csv",
+        "field": "guest_name,hotel_id,check_in",
+        "record": "AG01-00013",
+        "detail": "Cross-channel duplicate of F2 res-10024 (booking_channel_a): agency guest 'Diego ferreira' vs F2 guest 'Diego Ferreira', check_in 2026-11-11 vs 2026-11-11 (RN-08)"
+      }
+    ],
+    "files": [
+      {
+        "file": "andes_travel_week.csv",
+        "valid_schema": true,
+        "layout": "A",
+        "rows": 12,
+        "defect_count": 2,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "andes_travel_week.csv",
+            "field": "currency",
+            "record": "AG04-00041",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          },
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "andes_travel_week.csv",
+            "field": "currency",
+            "record": "AG04-00048",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          }
+        ]
+      },
+      {
+        "file": "bluesky_agency_week.csv",
+        "valid_schema": true,
+        "layout": "A",
+        "rows": 12,
+        "defect_count": 2,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "bluesky_agency_week.csv",
+            "field": "currency",
+            "record": "AG12-00138",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          },
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "bluesky_agency_week.csv",
+            "field": "currency",
+            "record": "AG12-00146",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          }
+        ]
+      },
+      {
+        "file": "caribeviajes_week.csv",
+        "valid_schema": true,
+        "layout": "A",
+        "rows": 12,
+        "defect_count": 1,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "caribeviajes_week.csv",
+            "field": "currency",
+            "record": "AG06-00068",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          }
+        ]
+      },
+      {
+        "file": "costabella_travel_week.csv",
+        "valid_schema": true,
+        "layout": "A",
+        "rows": 12,
+        "defect_count": 3,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "costabella_travel_week.csv",
+            "field": "currency",
+            "record": "AG08-00088",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          },
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "costabella_travel_week.csv",
+            "field": "currency",
+            "record": "AG08-00094",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          },
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "costabella_travel_week.csv",
+            "field": "currency",
+            "record": "AG08-00096",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          }
+        ]
+      },
+      {
+        "file": "destino_feliz_week.csv",
+        "valid_schema": true,
+        "layout": "B",
+        "rows": 12,
+        "defect_count": 1,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "destino_feliz_week.csv",
+            "field": "currency",
+            "record": "AG13-00148",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          }
+        ]
+      },
+      {
+        "file": "eurotrip_agency_week.csv",
+        "valid_schema": true,
+        "layout": "B",
+        "rows": 13,
+        "defect_count": 1,
+        "defects": [
+          {
+            "type": "CROSS_CHANNEL_DUPLICATE",
+            "file": "eurotrip_agency_week.csv",
+            "field": "guest_name,hotel_id,check_in",
+            "record": "AG03-00039",
+            "detail": "Cross-channel duplicate of F2 res-10029 (direct_ota): agency guest 'Elena santos' vs F2 guest 'Elena Santos', check_in 2027-01-25 vs 2027-01-26 (RN-08)"
+          }
+        ]
+      },
+      {
+        "file": "globalstay_agency_week.csv",
+        "valid_schema": true,
+        "layout": "B",
+        "rows": 12,
+        "defect_count": 0,
+        "defects": []
+      },
+      {
+        "file": "horizonte_viajes_week.csv",
+        "valid_schema": true,
+        "layout": "A",
+        "rows": 12,
+        "defect_count": 0,
+        "defects": []
+      },
+      {
+        "file": "montanatours_week.csv",
+        "valid_schema": true,
+        "layout": "B",
+        "rows": 12,
+        "defect_count": 0,
+        "defects": []
+      },
+      {
+        "file": "nortesur_agencia_week.csv",
+        "valid_schema": true,
+        "layout": "B",
+        "rows": 12,
+        "defect_count": 2,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "nortesur_agencia_week.csv",
+            "field": "currency",
+            "record": "AG09-00100",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          },
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "nortesur_agencia_week.csv",
+            "field": "currency",
+            "record": "AG09-00110",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          }
+        ]
+      },
+      {
+        "file": "puerta_del_sol_travel_week.csv",
+        "valid_schema": true,
+        "layout": "A",
+        "rows": 12,
+        "defect_count": 0,
+        "defects": []
+      },
+      {
+        "file": "rutas_del_sur_week.csv",
+        "valid_schema": true,
+        "layout": "B",
+        "rows": 12,
+        "defect_count": 1,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "rutas_del_sur_week.csv",
+            "field": "currency",
+            "record": "AG11-00128",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          }
+        ]
+      },
+      {
+        "file": "solymar_tours_week.csv",
+        "valid_schema": true,
+        "layout": "A",
+        "rows": 13,
+        "defect_count": 2,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "solymar_tours_week.csv",
+            "field": "currency",
+            "record": "AG02-00016",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          },
+          {
+            "type": "CROSS_CHANNEL_DUPLICATE",
+            "file": "solymar_tours_week.csv",
+            "field": "guest_name,hotel_id,check_in",
+            "record": "AG02-00026",
+            "detail": "Cross-channel duplicate of F2 res-10012 (expedia): agency guest 'Patricia Rossi' vs F2 guest 'Patricia Rossi', check_in 2026-11-07 vs 2026-11-08 (RN-08)"
+          }
+        ]
+      },
+      {
+        "file": "viajafacil_week.csv",
+        "valid_schema": true,
+        "layout": "B",
+        "rows": 13,
+        "defect_count": 2,
+        "defects": [
+          {
+            "type": "MISSING_CURRENCY",
+            "file": "viajafacil_week.csv",
+            "field": "currency",
+            "record": "AG01-00007",
+            "detail": "Currency code is empty (Section 5.3 Defect 3)"
+          },
+          {
+            "type": "CROSS_CHANNEL_DUPLICATE",
+            "file": "viajafacil_week.csv",
+            "field": "guest_name,hotel_id,check_in",
+            "record": "AG01-00013",
+            "detail": "Cross-channel duplicate of F2 res-10024 (booking_channel_a): agency guest 'Diego ferreira' vs F2 guest 'Diego Ferreira', check_in 2026-11-11 vs 2026-11-11 (RN-08)"
+          }
+        ]
+      },
+      {
+        "file": "viajes_amanecer_week.csv",
+        "valid_schema": true,
+        "layout": "B",
+        "rows": 12,
+        "defect_count": 0,
+        "defects": []
+      }
+    ]
+  }
+}

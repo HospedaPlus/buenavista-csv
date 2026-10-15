@@ -1,0 +1,8 @@
+{
+  "label": "File Sources (F1 & F4)",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Technical specifications, schemas, IQR profiling, and batch quality controls for HospedaPlus Revenue file-based sources (F1 & F4)."
+  }
+}

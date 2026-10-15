@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F4_Traditional_Agency_Files_Contract",
+  "description": "Schema contract for F4 weekly traditional agency CSV exports supporting dual layouts (Layout A and Layout B).",
+  "expected_agency_count": 15,
+  "file_naming_pattern": "^[a-z0-9_]+_week\\.csv$",
+  "commission_rate_expected": 0.1,
+  "allowed_room_types": [
+    "SINGLE",
+    "DOUBLE",
+    "TWIN",
+    "SUITE"
+  ],
+  "allowed_currencies": [
+    "EUR",
+    "USD"
+  ],
+  "layouts": {
+    "A": {
+      "description": "Even-indexed agencies (7 agencies)",
+      "columns": [
+        "agency_booking_id",
+        "guest_name",
+        "hotel_id",
+        "check_in",
+        "check_out",
+        "room_type",
+        "currency",
+        "total_amount",
+        "commission_rate"
+      ]
+    },
+    "B": {
+      "description": "Odd-indexed agencies (8 agencies)",
+      "columns": [
+        "booking_ref",
+        "hotel_id",
+        "guest_full_name",
+        "checkin_date",
+        "checkout_date",
+        "room_category",
+        "amount",
+        "currency",
+        "commission_pct"
+      ]
+    }
+  },
+  "canonical_mapping": {
+    "booking_ref": "agency_booking_id",
+    "guest_full_name": "guest_name",
+    "checkin_date": "check_in",
+    "checkout_date": "check_out",
+    "room_category": "room_type",
+    "amount": "total_amount",
+    "commission_pct": "commission_rate"
+  }
+}
